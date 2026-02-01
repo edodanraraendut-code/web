@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Edo Pratama - Pelajar & Node.js Developer. Spesialisasi dalam pembuatan sistem backend dan website modern.">
+    <meta name="author" content="Edo Pratama">
+    <title>Edo Pratama | Node.js Developer & Student</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            light: '#D4AF37',
+                            DEFAULT: '#C5A028',
+                            dark: '#A68018',
+                        },
+                        premium: {
+                            dark: '#0a0a0a',
+                            grey: '#1a1a1a',
+                            silver: '#b0b0b0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Gold Gradient Text */
+        .gold-gradient {
+            background: linear-gradient(90deg, #A68018, #D4AF37, #F1D382, #A68018);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 8s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* Reveal Animation on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Border Glow Effect */
+        .premium-border {
+            border: 1px solid rgba(197, 160, 40, 0.15);
+            background: linear-gradient(145deg, rgba(26, 26, 26, 1), rgba(15, 15, 15, 1));
+            transition: all 0.4s ease;
+        }
+
+        .premium-border:hover {
+            border: 1px solid rgba(197, 160, 40, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(197, 160, 40, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Smooth Section Padding */
+        section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans selection:bg-gold selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-[100] bg-premium-dark/90 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <a href="#home" class="font-serif text-2xl font-bold tracking-tighter text-gold">EP.</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-12 text-[11px] tracking-[0.3em] uppercase font-bold text-premium-silver">
+                <a href="#about" class="hover:text-gold transition-all duration-300">Tentang</a>
+                <a href="#expertise" class="hover:text-gold transition-all duration-300">Keahlian</a>
+                <a href="#contact" class="hover:text-gold transition-all duration-300">Hubungi</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="https://wa.me/6285955201695?text=Halo%20Edo%20Pratama%2C%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20berkonsultasi%20mengenai%20website." 
+               target="_blank" 
+               class="bg-gold text-black px-6 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">
+                Kontak
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block px-4 py-1 border border-gold/30 rounded-full mb-8 reveal active">
+                <span class="text-gold text-[10px] tracking-[0.4em] uppercase font-bold">Node.js Specialist & Student</span>
+            </div>
+            <h1 class="font-serif text-6xl md:text-9xl mb-8 reveal active" style="transition-delay: 200ms;">
+                Edo Pratama
+            </h1>
+            <div class="h-[1px] w-32 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-10 reveal active" style="transition-delay: 400ms;"></div>
+            <p class="text-premium-silver tracking-[0.1em] text-sm md:text-lg max-w-2xl mx-auto font-light leading-relaxed reveal active" style="transition-delay: 600ms;">
+                Fokus pada pengembangan sistem backend yang efisien dan desain antarmuka yang elegan. Menyatukan kreativitas dan logika di setiap baris kode.
+            </p>
+            <div class="mt-12 flex flex-col md:flex-row gap-6 justify-center reveal active" style="transition-delay: 800ms;">
+                <a href="#about" class="px-10 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-gold transition-all">Pelajari Profil</a>
+                <a href="#contact" class="px-10 py-4 border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:border-gold hover:text-gold transition-all">Mulai Proyek</a>
+            </div>
+        </div>
+        
+        <!-- Background Decoration -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,40,0.05),transparent)] -z-10"></div>
+    </section>
+
+    <!-- Section: Identity -->
+    <section id="about" class="bg-premium-grey/30">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-8 leading-tight">Membangun Masa Depan <br><span class="gold-gradient italic">Melalui Teknologi.</span></h2>
+                    <p class="text-premium-silver leading-loose mb-8 text-sm md:text-base">
+                        Halo! Saya Edo, seorang pelajar berusia 16 tahun yang memiliki antusiasme besar dalam <span class="text-white font-semibold">Node.js Development</span>. 
+                        Bagi saya, pemrograman bukan sekadar tugas sekolah, melainkan seni memecahkan masalah kompleks menjadi solusi digital yang nyata.
+                    </p>
+                    <p class="text-premium-silver leading-loose text-sm md:text-base mb-10">
+                        Saya aktif mengasah kemampuan dalam arsitektur server-side, manajemen basis data, dan integrasi API untuk menciptakan pengalaman web yang responsif dan aman.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="flex flex-col">
+                            <span class="text-gold font-bold text-2xl font-serif">16+</span>
+                            <span class="text-[9px] tracking-widest uppercase text-premium-silver">Umur</span>
+                        </div>
+                        <div class="w-[1px] h-10 bg-white/10 mx-4"></div>
+                        <div class="flex flex-col">
+                            <span class="text-gold font-bold text-2xl font-serif">Node.js</span>
+                            <span class="text-[9px] tracking-widest uppercase text-premium-silver">Core Stack</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 reveal" style="transition-delay: 300ms;">
+                    <div class="premium-border p-10 rounded-lg">
+                        <i class="fas fa-school text-gold text-2xl mb-4"></i>
+                        <h3 class="font-serif text-lg mb-2">Akademik</h3>
+                        <p class="text-xs text-premium-silver">Fokus pada pendidikan teknologi komputer.</p>
+                    </div>
+                    <div class="premium-border p-10 rounded-lg">
+                        <i class="fas fa-code text-gold text-2xl mb-4"></i>
+                        <h3 class="font-serif text-lg mb-2">Backend</h3>
+                        <p class="text-xs text-premium-silver">Spesialisasi logika server menggunakan Node.js.</p>
+                    </div>
+                    <div class="premium-border p-10 rounded-lg col-span-2 text-center">
+                        <i class="fas fa-terminal text-gold text-2xl mb-4"></i>
+                        <h3 class="font-serif text-lg mb-2">Website Real-time</h3>
+                        <p class="text-xs text-premium-silver">Membangun website dinamis dengan performa tinggi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Expertise -->
+    <section id="expertise">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-24 reveal">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">Layanan & <span class="text-gold italic">Keahlian</span></h2>
+                <div class="h-[2px] w-24 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="reveal text-center group">
+                    <div class="mb-8 inline-block p-6 rounded-full bg-premium-grey group-hover:bg-gold transition-all duration-500">
+                        <i class="fab fa-node-js text-4xl text-gold group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">API Development</h3>
+                    <p class="text-sm text-premium-silver leading-relaxed font-light">Membangun jembatan data yang aman dan cepat menggunakan Express.js dan REST API.</p>
+                </div>
+                
+                <div class="reveal text-center group" style="transition-delay: 200ms;">
+                    <div class="mb-8 inline-block p-6 rounded-full bg-premium-grey group-hover:bg-gold transition-all duration-500">
+                        <i class="fas fa-database text-4xl text-gold group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">Database Design</h3>
+                    <p class="text-sm text-premium-silver leading-relaxed font-light">Struktur penyimpanan data yang optimal menggunakan solusi SQL maupun NoSQL.</p>
+                </div>
+
+                <div class="reveal text-center group" style="transition-delay: 400ms;">
+                    <div class="mb-8 inline-block p-6 rounded-full bg-premium-grey group-hover:bg-gold transition-all duration-500">
+                        <i class="fas fa-laptop-code text-4xl text-gold group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4">Custom Website</h3>
+                    <p class="text-sm text-premium-silver leading-relaxed font-light">Pembuatan website kustom dari nol dengan fokus pada fungsionalitas dan estetika.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="relative">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <div class="reveal">
+                <h2 class="font-serif text-5xl md:text-7xl mb-12 leading-tight">Wujudkan Ide <br><span class="gold-gradient italic">Digital Anda.</span></h2>
+                <p class="text-premium-silver mb-16 tracking-[0.2em] uppercase text-xs font-semibold">Tersedia untuk Proyek Freelance & Kerjasama</p>
+                
+                <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
+                    <!-- WhatsApp Production Link -->
+                    <a href="https://wa.me/6285955201695?text=Halo%20Edo%20Pratama%2C%20saya%20tertarik%20bekerja%20sama%20untuk%20proyek%20pengembangan%20website%2Fbackend." 
+                       target="_blank" 
+                       class="w-full md:w-auto px-12 py-5 bg-gold text-black hover:bg-white transition-all duration-500 tracking-[0.3em] text-[10px] font-black uppercase flex items-center justify-center gap-3">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        Hubungi via WhatsApp
+                    </a>
+                    
+                    <a href="mailto:bellaaiverifikasi@gmail.com" class="text-premium-silver hover:text-gold transition-all tracking-[0.3em] text-[10px] uppercase font-bold border-b border-white/10 pb-2">
+                        bellaaiverifikasi@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center gap-8 mb-8 text-premium-silver">
+                <a href="https://github.com" target="_blank" class="hover:text-gold transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-gold transition-colors"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="text-[9px] tracking-[0.5em] text-premium-silver uppercase opacity-40 mb-4">
+                &copy; 2024-2025 Edo Pratama. Hak Cipta Dilindungi.
+            </p>
+            <a href="#home" class="inline-block animate-bounce text-gold opacity-60 hover:opacity-100">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Logic
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            const windowHeight = window.innerHeight;
+            
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 100;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add("active");
+                }
+            });
+        }
+
+        // Event Listeners
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal); // Initial check on load
+
+        // Smooth Nav Highlight (Optional Production Logic)
+        const navLinks = document.querySelectorAll('nav a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-gold');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-gold');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
